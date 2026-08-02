@@ -65,6 +65,21 @@ public class Task {
         return priority;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) {
+        return false;
+        }
+
+        Task task = (Task) o;
+        return Objects.equals(id, task.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
+    }
+
     public void setPriority(TaskPriority priority) {
         this.priority = priority;
     }
