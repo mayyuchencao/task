@@ -17,6 +17,17 @@ public class Task {
 
     @Column(name = "description", length = 1000)
     private String description;
+
+    public Task(UUID id, String title, String description, LocalDate dueDate, TaskStatus status, TaskPriority priority, Instant created, Instant updated) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.status = status;
+        this.priority = priority;
+        this.created = created;
+        this.updated = updated; 
+    }
     
     @Column(name = "due_date")
     private LocalDate dueDate;
