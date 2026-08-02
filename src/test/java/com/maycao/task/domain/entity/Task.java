@@ -66,6 +66,21 @@ public class Task {
     }
 
     @Override
+    public String toString() {
+        return "Task{" +
+        "id=" + id +
+        ", title='" + title + '\'' +
+        ", description='" + description + '\'' +
+        ", dueDate=" + dueDate +
+        ", status=" + status +
+        ", priority=" + priority +
+        ", created=" + created +
+        ", updated=" + updated +
+        '}';
+    }
+
+
+    @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) {
         return false;
