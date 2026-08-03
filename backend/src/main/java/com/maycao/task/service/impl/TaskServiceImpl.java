@@ -35,4 +35,9 @@ public class TaskServiceImpl implements TaskService {
         return taskRepository.save(task);
     }
 
+    @Override
+    public List<Task> listTasks() {
+        return taskRepository.findAll(Sort.by(Sort.Direction.ASC, "created"));
+    
+    }
 }
