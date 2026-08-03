@@ -1,7 +1,7 @@
 package com.maycao.task.domain.dto;
 
-import com.maycao.task.domain.TaskPriority;
-import com.maycao.task.domain.TaskStatus;
+import com.maycao.task.domain.entity.TaskPriority;
+import com.maycao.task.domain.entity.TaskStatus;
 import java.time.LocalDate;
 import java.util.UUID;
 

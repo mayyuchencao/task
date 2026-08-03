@@ -1,8 +1,7 @@
 package com.maycao.task.controller;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
-import com.devtiro.task.domain.dto.ErrorDto;
-import com.devtiro.task.exception.TaskNotFoundException;
+import com.maycao.task.domain.dto.ErrorDto;
 import java.util.UUID;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;

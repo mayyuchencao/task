@@ -4,13 +4,22 @@ import org.springframework.web.bind.annotation.RestController;
 import com.maycao.task.service.TaskService;
 import com.maycao.task.mapper.TaskMapper;
 import org.springframework.web.bind.annotation.RequestMapping;
+import com.maycao.task.domain.CreateTaskRequest;
+import com.maycao.task.domain.dto.CreateTaskRequestDto;
+import com.maycao.task.domain.dto.TaskDto;
+import com.maycao.task.domain.entity.Task;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping(path = "/api/v1/tasks")
 public class TaskController {
 
     private final TaskService taskService;
-    private fianl TaskMapper taskMapper;
+    private final TaskMapper taskMapper;
 
     public TaskController(TaskService taskService, TaskMapper taskMapper) {
         this.taskService = taskService;

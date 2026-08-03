@@ -1,10 +1,10 @@
 package com.maycao.task.mapper.impl;
 
-import com.devtiro.task.domain.CreateTaskRequest;
-import com.devtiro.task.domain.dto.CreateTaskRequestDto;
-import com.devtiro.task.domain.dto.TaskDto;
-import com.devtiro.task.domain.entity.Task;
-import com.devtiro.task.mapper.TaskMapper;
+import com.maycao.task.domain.CreateTaskRequest;
+import com.maycao.task.domain.dto.CreateTaskRequestDto;
+import com.maycao.task.domain.dto.TaskDto;
+import com.maycao.task.domain.entity.Task;
+import com.maycao.task.mapper.TaskMapper;
 import org.springframework.stereotype.Component;
 
 @Component

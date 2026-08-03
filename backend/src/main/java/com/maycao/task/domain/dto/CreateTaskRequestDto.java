@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import jakarta.annotation.Nullable;
 import java.time.LocalDate;
+import com.maycao.task.domain.entity.TaskPriority;
 
 public record CreateTaskRequestDto(
     @NotBlank(message = ERROR_MESSAGE_TITLE_LENGTH)
