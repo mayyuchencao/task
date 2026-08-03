@@ -36,4 +36,14 @@ public class TaskController {
 
         return new ResponseEntity<>(createdTaskDto, HttpStatus.CREATED);
     }
+
+    @GetMapping
+    public ResponseEntity<List<TaskDto>> listTasks() {
+        List<Task> tasks = taskService.listTasks();
+        List<TaskDto> taskDtos = tasks.stream()
+            .map(taskMapper::toDto)
+            .toList();
+        
+        return ResponseEntity.ok(taskDtos);
+    }
 }
