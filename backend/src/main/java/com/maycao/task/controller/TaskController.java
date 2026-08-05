@@ -20,6 +20,7 @@ import com.maycao.task.domain.dto.UpdateTaskRequestDto;
 import java.util.UUID;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 @RestController
 @RequestMapping(path = "/api/v1/tasks")
@@ -64,5 +65,11 @@ public class TaskController {
         TaskDto taskDto = taskMapper.toDto(task);
 
         return ResponseEntity.ok(taskDto);
+    }
+
+    @DeleteMapping(path = "/{taskId}")
+    public ResponseEntity<Void> deleteTask(@PathVariable UUID taskId) {
+        taskService.deleteTask(taskId);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
