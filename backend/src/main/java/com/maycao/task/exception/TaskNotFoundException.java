@@ -1,5 +1,7 @@
 package com.maycao.task.exception;
 
+import java.util.UUID;
+
 public class TaskNotFoundException extends RuntimeException {
 
     private final UUID id;

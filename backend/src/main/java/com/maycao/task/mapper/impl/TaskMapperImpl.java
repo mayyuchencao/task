@@ -6,6 +6,8 @@ import com.maycao.task.domain.dto.TaskDto;
 import com.maycao.task.domain.entity.Task;
 import com.maycao.task.mapper.TaskMapper;
 import org.springframework.stereotype.Component;
+import com.maycao.task.domain.UpdateTaskRequest;
+import com.maycao.task.domain.dto.UpdateTaskRequestDto;
 
 @Component
 public class TaskMapperImpl implements TaskMapper {

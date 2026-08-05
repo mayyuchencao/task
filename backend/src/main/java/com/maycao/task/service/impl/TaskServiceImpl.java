@@ -9,6 +9,9 @@ import java.time.Instant;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import org.springframework.data.domain.Sort;
+import com.maycao.task.domain.UpdateTaskRequest;
+import com.maycao.task.exception.TaskNotFoundException;
+import java.util.UUID;
 
 @Service
 public class TaskServiceImpl implements TaskService {
@@ -56,5 +59,10 @@ public class TaskServiceImpl implements TaskService {
         task.setUpdated(Instant.now());
 
         return taskRepository.save(task);
+    }
+
+    @Override
+    public void deleteTask(UUID taskId) {
+        taskRepository.deleteById(taskId); 
     }
 }
