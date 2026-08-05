@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import com.maycao.task.domain.entity.TaskPriority;
 import com.maycao.task.domain.entity.TaskStatus;
 
-public record CreateTaskRequestDto(
+public record UpdateTaskRequestDto(
     @NotBlank(message = ERROR_MESSAGE_TITLE_LENGTH)
     @Length(max = 255, message = ERROR_MESSAGE_TITLE_LENGTH)
     String title,
