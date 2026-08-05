@@ -21,6 +21,17 @@ public class TaskMapperImpl implements TaskMapper {
     }
 
     @Override
+    public UpdateTaskRequest fromDto(UpdateTaskRequestDto dto) {
+        return new UpdateTaskRequest(
+                dto.title(),
+                dto.description(),
+                dto.dueDate(),
+                dto.status(),
+                dto.priority()
+        );
+    }
+
+    @Override
     public TaskDto toDto(Task task) {
         return new TaskDto(
                 task.getId(),
