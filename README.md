@@ -167,15 +167,3 @@ npm run build
 ```
 
 The current backend test checks that the Spring application context loads. Endpoint, service, and frontend behavior tests are areas for future work.
-
-## Future Improvements
-
-- Add persistent PostgreSQL storage and versioned database migrations.
-- Add authentication and task ownership for multiple users.
-- Support filtering, sorting, and pagination for larger task lists.
-- Expand automated tests and run checks in CI.
-- Return `404 Not Found` for missing resources and refine validation for updates to overdue tasks.
-
-## Acknowledgments
-
-The frontend is based on the Devtiro Task App UI, as documented in its [README](frontend/README.md). Its MIT license and copyright notice are retained in [frontend/LICENSE](frontend/LICENSE).
